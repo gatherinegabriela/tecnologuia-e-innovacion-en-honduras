@@ -16,7 +16,7 @@
 
     <style>
         :root {
-            --blanco: #00FFFF;
+            --blanco: #e8393;
             --morado: #30105e;
             --morado-claro: #54258a;
             --azul: #071a40;
@@ -32,7 +32,6 @@
             font-family: 'Roboto', sans-serif;
             background: var(--azul);
             color: var(--texto);
-            margin: 0;
         }
 
         .header {
@@ -48,7 +47,6 @@
         .header .logo {
             color: var(--blanco);
             font-weight: 700;
-            text-decoration: none;
         }
 
         .header .logo i {
@@ -67,7 +65,6 @@
 
         .header .navbar ul li a {
             color: var(--blanco);
-            text-decoration: none;
             transition: 0.3s;
         }
 
@@ -110,18 +107,16 @@
         .contact {
             background: var(--azul);
             color: var(--texto);
-            padding: 50px 5%;
-            box-sizing: border-box;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
         .heading {
             color: var(--blanco);
-            text-align: center;
         }
 
         .title {
             color: #c8b5ff;
-            text-align: center;
         }
 
         h1, h2, h3 {
@@ -133,18 +128,6 @@
             line-height: 1.7;
         }
 
-        .content {
-            max-width: 850px;
-            margin: 0 auto 30px;
-        }
-
-        .box-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
         .box-container .box,
         .card-container .card {
             background: var(--morado);
@@ -152,8 +135,6 @@
             border-radius: 12px;
             padding: 20px;
             transition: 0.3s;
-            box-sizing: border-box;
-            min-width: 0;
         }
 
         .box-container .box:hover,
@@ -166,54 +147,10 @@
             color: #c8b5ff;
         }
 
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .row > .content,
-        .row > .image,
-        .row > .form-container {
-            flex: 1 1 300px;
-            min-width: 0;
-        }
-
-        .image img {
-            display: block;
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            margin: auto;
-        }
-
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
         .card img,
         .review .box img {
-            display: block;
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
+            max-width: 100%;
             border-radius: 8px;
-        }
-
-        .card .icons {
-            margin-top: 15px;
-        }
-
-        .card .icons a {
-            color: #c8b5ff;
-            font-size: 22px;
-            margin-right: 10px;
         }
 
         button,
@@ -232,14 +169,8 @@
             background: var(--azul-claro);
         }
 
-        .form-container {
-            max-width: 550px;
-            width: 100%;
-        }
-
         .form-container input,
         .form-container textarea {
-            display: block;
             background: #ffffff;
             color: #071a40;
             border: 1px solid #bda5ff;
@@ -248,16 +179,11 @@
             margin-bottom: 12px;
             width: 100%;
             box-sizing: border-box;
-            font-family: inherit;
         }
 
         .form-container input::placeholder,
         .form-container textarea::placeholder {
             color: #55516b;
-        }
-
-        .form-container input[type="submit"] {
-            width: auto;
         }
 
         .icons a {
@@ -279,7 +205,6 @@
 
         .footer .credit {
             color: var(--blanco);
-            margin-top: 20px;
         }
 
         .footer .credit span {
@@ -298,7 +223,7 @@
             filter: brightness(0.85);
         }
 
-        /* EDITOR DE REDES SOCIALES */
+        /* EDITAR REDES SOCIALES */
         .editor-redes {
             display: none;
             background: var(--azul-claro);
@@ -308,7 +233,6 @@
             margin: 20px auto;
             max-width: 600px;
             text-align: left;
-            box-sizing: border-box;
         }
 
         .editor-redes.visible {
@@ -347,7 +271,6 @@
             justify-content: center;
             align-items: center;
             gap: 18px;
-            flex-wrap: wrap;
             margin: 20px 0;
         }
 
@@ -362,7 +285,6 @@
             background: var(--azul);
             color: #c8b5ff;
             font-size: 22px;
-            text-decoration: none;
             transition: 0.3s;
         }
 
@@ -386,15 +308,6 @@
                 padding: 10px 12px;
                 font-size: 13px;
                 margin: 5px;
-            }
-
-            .home,
-            .about,
-            .course,
-            .teacher,
-            .review,
-            .contact {
-                padding: 35px 5%;
             }
         }
     </style>
@@ -494,7 +407,6 @@
         <h3 class="title">Un país que avanza hacia la transformación digital</h3>
 
         <div class="row">
-
             <div class="content">
                 <h3>La tecnología como herramienta para el desarrollo</h3>
 
@@ -522,7 +434,6 @@
                 <img src="images/Learning languages-cuate.svg"
                     alt="Ilustración de tecnología y transformación digital">
             </div>
-
         </div>
     </section>
 
@@ -587,9 +498,7 @@
                 <h3>Alan Turing</h3>
                 <p>Pionero de la informática moderna. Sus investigaciones sobre computación y descifrado de códigos tuvieron una gran importancia histórica.</p>
                 <div class="icons">
-                    <a href="https://en.wikipedia.org/wiki/Alan_Turing"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Información sobre Alan Turing">
+                    <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank" rel="noopener noreferrer" aria-label="Información sobre Alan Turing">
                         <i class="fas fa-laptop-code"></i>
                     </a>
                 </div>
@@ -601,9 +510,7 @@
                 <h3>Nikola Tesla</h3>
                 <p>Realizó importantes aportes a los sistemas eléctricos de corriente alterna y al desarrollo de motores.</p>
                 <div class="icons">
-                    <a href="https://en.wikipedia.org/wiki/Nikola_Tesla"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Información sobre Nikola Tesla">
+                    <a href="https://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank" rel="noopener noreferrer" aria-label="Información sobre Nikola Tesla">
                         <i class="fas fa-bolt"></i>
                     </a>
                 </div>
@@ -615,9 +522,7 @@
                 <h3>Ada Lovelace</h3>
                 <p>Es reconocida por escribir un algoritmo destinado a la máquina analítica de Charles Babbage y por sus aportes pioneros a la programación.</p>
                 <div class="icons">
-                    <a href="https://en.wikipedia.org/wiki/Ada_Lovelace"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Información sobre Ada Lovelace">
+                    <a href="https://en.wikipedia.org/wiki/Ada_Lovelace" target="_blank" rel="noopener noreferrer" aria-label="Información sobre Ada Lovelace">
                         <i class="fas fa-code"></i>
                     </a>
                 </div>
@@ -629,9 +534,7 @@
                 <h3>Tim Berners-Lee</h3>
                 <p>Inventó la World Wide Web, tecnología que permite consultar páginas web y compartir información mediante enlaces.</p>
                 <div class="icons">
-                    <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Información sobre Tim Berners-Lee">
+                    <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" aria-label="Información sobre Tim Berners-Lee">
                         <i class="fas fa-globe"></i>
                     </a>
                 </div>
@@ -643,10 +546,20 @@
                 <h3>Dennis Ritchie</h3>
                 <p>Creó el lenguaje de programación C y contribuyó al desarrollo del sistema operativo Unix.</p>
                 <div class="icons">
-                    <a href="https://en.wikipedia.org/wiki/Dennis_Ritchie"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Información sobre Dennis Ritchie">
+                    <a href="https://en.wikipedia.org/wiki/Dennis_Ritchie" target="_blank" rel="noopener noreferrer" aria-label="Información sobre Dennis Ritchie">
                         <i class="fas fa-terminal"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Martin_Cooper.jpg"
+                    alt="Martin Cooper" loading="lazy">
+                <h3>Martin Cooper</h3>
+                <p>Lideró el equipo de Motorola que desarrolló uno de los primeros teléfonos celulares portátiles.</p>
+                <div class="icons">
+                    <a href="https://en.wikipedia.org/wiki/Martin_Cooper_(inventor)" target="_blank" rel="noopener noreferrer" aria-label="Información sobre Martin Cooper">
+                        <i class="fas fa-mobile-alt"></i>
                     </a>
                 </div>
             </div>
@@ -663,24 +576,21 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="images/pic1.jpg"
-                    alt="Conectividad digital en Honduras" loading="lazy">
+                <img src="images/pic1.jpg" alt="Conectividad digital en Honduras" loading="lazy">
                 <h3>Conectividad</h3>
                 <p>La conectividad digital puede acercar servicios, información y oportunidades a las comunidades hondureñas.</p>
                 <div class="stars"><i class="fas fa-wifi"></i></div>
             </div>
 
             <div class="box">
-                <img src="images/pic2.jpg"
-                    alt="Innovación tecnológica en Honduras" loading="lazy">
+                <img src="images/pic2.jpg" alt="Innovación tecnológica en Honduras" loading="lazy">
                 <h3>Innovación</h3>
                 <p>Los proyectos tecnológicos pueden ayudar a crear productos, servicios y soluciones para diferentes sectores del país.</p>
                 <div class="stars"><i class="fas fa-lightbulb"></i></div>
             </div>
 
             <div class="box">
-                <img src="images/pic3.jpg"
-                    alt="Futuro tecnológico de Honduras" loading="lazy">
+                <img src="images/pic3.jpg" alt="Futuro tecnológico de Honduras" loading="lazy">
                 <h3>Futuro tecnológico</h3>
                 <p>La formación digital y el acceso a nuevas tecnologías ofrecen oportunidades para las nuevas generaciones.</p>
                 <div class="stars"><i class="fas fa-rocket"></i></div>
@@ -696,29 +606,19 @@
         <h3 class="title">¿Querés hablar sobre tecnología?</h3>
 
         <div class="row">
-
             <div class="image">
                 <img src="images/contact.svg" alt="Contacto">
             </div>
 
             <div class="form-container">
                 <form action="" method="post">
-                    <input type="text" name="nombre"
-                        placeholder="Nombre completo" required>
-
-                    <input type="email" name="correo"
-                        placeholder="Correo electrónico" required>
-
-                    <input type="tel" name="telefono"
-                        placeholder="Número de teléfono">
-
-                    <textarea name="message" id="message" rows="6"
-                        placeholder="Escribí tu mensaje" required></textarea>
-
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="correo" placeholder="Correo electrónico" required>
+                    <input type="tel" name="telefono" placeholder="Número de teléfono">
+                    <textarea name="message" id="message" rows="6" placeholder="Escribí tu mensaje" required></textarea>
                     <input type="submit" value="Enviar mensaje">
                 </form>
             </div>
-
         </div>
     </section>
 
@@ -731,26 +631,18 @@
             <h3>Editar enlaces de redes sociales</h3>
 
             <label for="facebook-url">Enlace de Facebook</label>
-            <input type="url" id="facebook-url"
-                placeholder="https://www.facebook.com/tu-pagina">
+            <input type="url" id="facebook-url" placeholder="https://www.facebook.com/tu-pagina">
 
             <label for="instagram-url">Enlace de Instagram</label>
-            <input type="url" id="instagram-url"
-                placeholder="https://www.instagram.com/tu-cuenta">
+            <input type="url" id="instagram-url" placeholder="https://www.instagram.com/tu-cuenta">
 
             <label for="whatsapp-url">Enlace de WhatsApp</label>
-            <input type="url" id="whatsapp-url"
-                placeholder="https://wa.me/504XXXXXXXX">
-
-            <label for="tiktok-url">Enlace de TikTok</label>
-            <input type="url" id="tiktok-url"
-                placeholder="https://www.tiktok.com/@tu-cuenta">
+            <input type="url" id="whatsapp-url" placeholder="https://wa.me/504XXXXXXXX">
 
             <div class="acciones">
                 <button type="button" id="guardar-redes">Guardar enlaces</button>
                 <button type="button" id="cancelar-redes">Cancelar</button>
             </div>
-
         </div>
 
         <!-- ICONOS DE REDES SOCIALES -->
@@ -777,32 +669,21 @@
                 <i class="fab fa-whatsapp"></i>
             </a>
 
-            <a id="enlace-tiktok"
-                href="https://www.tiktok.com/"
-                target="_blank" rel="noopener noreferrer"
-                aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-
         </div>
 
         <div class="credit">
-            Creado por <span>Katherine Gonzales</span>
+            Creado por <span>katherine Gonzales</span>
             | Todos los derechos reservados
         </div>
-
     </section>
 
-    <!-- FUNCIONALIDAD PARA EDITAR IMÁGENES Y REDES -->
+    <!-- FUNCIONALIDAD PARA EDITAR IMÁGENES Y REDES SOCIALES -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
             /* EDITAR IMÁGENES */
-            const botonImagenes =
-                document.getElementById("editar-imagenes");
-
-            const selectorImagen =
-                document.getElementById("selector-imagen");
+            const botonImagenes = document.getElementById("editar-imagenes");
+            const selectorImagen = document.getElementById("selector-imagen");
 
             let modoEdicionImagenes = false;
             let imagenSeleccionada = null;
@@ -853,9 +734,7 @@
                     imagenSeleccionada.src = evento.target.result;
                     cancelarEdicionImagenes();
 
-                    alert(
-                        "Imagen cambiada. El cambio es temporal y no modifica el archivo original."
-                    );
+                    alert("Imagen cambiada. El cambio es temporal y no modifica el archivo original.");
                 };
 
                 lector.onerror = function () {
@@ -879,48 +758,25 @@
                 selectorImagen.value = "";
             }
 
-            /* EDITAR REDES SOCIALES */
-            const botonEditarRedes =
-                document.getElementById("boton-editar-redes");
+            /* EDITAR FACEBOOK, INSTAGRAM Y WHATSAPP */
+            const botonEditarRedes = document.getElementById("boton-editar-redes");
+            const editorRedes = document.getElementById("editor-redes");
 
-            const editorRedes =
-                document.getElementById("editor-redes");
+            const campoFacebook = document.getElementById("https://www.facebook.com/share/1JyssPadGK/?mibextid=wwXIfr");
+            const campoInstagram = document.getElementById("instagram-url");
+            const campoWhatsapp = document.getElementById("whatsapp-url");
 
-            const campoFacebook =
-                document.getElementById("facebook-url");
+            const enlaceFacebook = document.getElementById("enlace-facebook");
+            const enlaceInstagram = document.getElementById("enlace-instagram");
+            const enlaceWhatsapp = document.getElementById("enlace-whatsapp");
 
-            const campoInstagram =
-                document.getElementById("instagram-url");
-
-            const campoWhatsapp =
-                document.getElementById("whatsapp-url");
-
-            const campoTikTok =
-                document.getElementById("tiktok-url");
-
-            const enlaceFacebook =
-                document.getElementById("enlace-facebook");
-
-            const enlaceInstagram =
-                document.getElementById("enlace-instagram");
-
-            const enlaceWhatsapp =
-                document.getElementById("enlace-whatsapp");
-
-            const enlaceTikTok =
-                document.getElementById("enlace-tiktok");
-
-            const botonGuardarRedes =
-                document.getElementById("guardar-redes");
-
-            const botonCancelarRedes =
-                document.getElementById("cancelar-redes");
+            const botonGuardarRedes = document.getElementById("guardar-redes");
+            const botonCancelarRedes = document.getElementById("cancelar-redes");
 
             function cargarEnlacesRedes() {
-                campoFacebook.value = enlaceFacebook.href;
-                campoInstagram.value = enlaceInstagram.href;
-                campoWhatsapp.value = enlaceWhatsapp.href;
-                campoTikTok.value = enlaceTikTok.href;
+                campoFacebook.value = enlaceFacebook.getAttribute("href");
+                campoInstagram.value = enlaceInstagram.getAttribute("href");
+                campoWhatsapp.value = enlaceWhatsapp.getAttribute("href");
             }
 
             botonEditarRedes.addEventListener("click", function () {
@@ -929,67 +785,42 @@
             });
 
             botonGuardarRedes.addEventListener("click", function () {
+                const facebook = campoFacebook.value.trim();
+                const instagram = campoInstagram.value.trim();
+                const whatsapp = campoWhatsapp.value.trim();
 
                 const enlaces = [
-                    {
-                        campo: campoFacebook,
-                        nombre: "Facebook"
-                    },
-                    {
-                        campo: campoInstagram,
-                        nombre: "Instagram"
-                    },
-                    {
-                        campo: campoWhatsapp,
-                        nombre: "WhatsApp"
-                    },
-                    {
-                        campo: campoTikTok,
-                        nombre: "TikTok"
-                    }
+                    { valor: facebook, nombre: "Facebook" },
+                    { valor: instagram, nombre: "Instagram" },
+                    { valor: whatsapp, nombre: "WhatsApp" }
                 ];
 
-                for (const item of enlaces) {
-                    const valor = item.campo.value.trim();
-
-                    if (!valor) {
-                        alert("Ingresá el enlace de " + item.nombre + ".");
+                for (const enlace of enlaces) {
+                    if (!enlace.valor) {
+                        alert("Ingresá el enlace de " + enlace.nombre + ".");
                         return;
                     }
 
                     try {
-                        const url = new URL(valor);
+                        const url = new URL(enlace.valor);
 
-                        if (
-                            url.protocol !== "https:" &&
-                            url.protocol !== "http:"
-                        ) {
-                            alert(
-                                "El enlace de " + item.nombre +
-                                " debe comenzar con https:// o http://"
-                            );
+                        if (url.protocol !== "https:" && url.protocol !== "http:") {
+                            alert("El enlace de " + enlace.nombre + " debe comenzar con https:// o http://");
                             return;
                         }
-
                     } catch (error) {
-                        alert(
-                            "El enlace de " + item.nombre +
-                            " no es válido."
-                        );
+                        alert("El enlace de " + enlace.nombre + " no es válido.");
                         return;
                     }
                 }
 
-                enlaceFacebook.href = campoFacebook.value.trim();
-                enlaceInstagram.href = campoInstagram.value.trim();
-                enlaceWhatsapp.href = campoWhatsapp.value.trim();
-                enlaceTikTok.href = campoTikTok.value.trim();
+                enlaceFacebook.href = facebook;
+                enlaceInstagram.href = instagram;
+                enlaceWhatsapp.href = whatsapp;
 
                 editorRedes.classList.remove("visible");
 
-                alert(
-                    "Los enlaces se actualizaron. Para conservarlos al recargar, cambiá también las direcciones en el HTML."
-                );
+                alert("Enlaces actualizados. Para conservarlos al recargar la página, cambiá también los enlaces en el código HTML.");
             });
 
             botonCancelarRedes.addEventListener("click", function () {
